@@ -1,0 +1,240 @@
+
+:root {
+
+    --step--2: clamp(0.78rem, calc(0.71rem + 0.38vw), 1.00rem);
+    --step--1: clamp(0.94rem, calc(0.83rem + 0.54vw), 1.25rem);
+    --step-0: clamp(1.13rem, calc(0.97rem + 0.76vw), 1.56rem);
+    --step-1: clamp(1.35rem, calc(1.14rem + 1.05vw), 1.95rem);
+    --step-2: clamp(1.62rem, calc(1.33rem + 1.43vw), 2.44rem);
+    --step-3: clamp(1.94rem, calc(1.56rem + 1.93vw), 3.05rem);
+    --step-4: clamp(2.33rem, calc(1.82rem + 2.58vw), 3.82rem);
+    --step-5: clamp(2.80rem, calc(2.11rem + 3.42vw), 4.77rem);
+}
+
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* outline: 1px solid greenyellow; */
+}
+
+/** Framework */
+
+.container {
+
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Small */
+
+@media (min-width: 768px) {
+
+    .container {
+        width: 750px;
+  }
+}
+
+/* Medium */
+
+@media (min-width: 992px) {
+
+    .container {
+        width: 970px;
+  }
+}
+
+/* Large */
+
+@media (min-width: 1200px) {
+
+    .container {
+        width: 1170px;
+  }
+}
+
+a {
+
+    text-decoration: none;
+}
+
+.flex {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/** The Styling  */
+
+body , html {
+
+    overflow-x: hidden;
+}
+
+body {
+
+    min-height: 100vh;
+    font-size: var(--step-0);
+    font-family: sans-serif;
+    background-color: hsl(204, 43%, 93%);
+}
+
+@media (max-width: 380px) {
+
+    body {
+        font-size: var(--step--1);
+    }
+}
+
+@media (max-width: 313px) {
+
+    body {
+        font-size: var(--step--2);
+    }
+}
+
+body main .card {
+    
+    width: 720px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    overflow: hidden;
+}
+
+body main .card .row {
+ 
+    font-size: var(--step-1);
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff;
+}
+
+body main .card .row .title {
+ 
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: hsl(179, 62%, 43%);
+}
+
+body main .card .row .sub-title {
+
+    font-weight: bold;
+    color: hsl(71, 73%, 54%);
+    font-size: .7em;
+}
+
+body main .card .row p:last-of-type {
+
+    font-size: .5em;
+    color: #333333a3;
+}
+
+body main .card .col {
+
+    width: 50%;
+    padding: 30px 40px;
+    color: #fff;
+    background-color: hsl(179, 62%, 43%);
+}
+
+body main .card .col-1 {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 18px;
+    background-color: hsl(179deg 46.95% 45.72%);
+}
+
+body main .card .col-1 .con {
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+body main .card .col-1 .con .prise {
+
+    font-size: .7em;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    color: #ffffffa3;
+}
+
+body main .card .col-1 .con .prise span {
+    
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+body main .card .col-1 .con > p {
+
+    font-size: .6em;
+    opacity: .8;
+}
+
+body main .card .col-1 .button {
+
+    color: #fff;
+    background-color: hsl(71, 73%, 54%);
+    border-radius: 7px;
+    padding: 10px;
+    font-size: .8em;
+}
+
+body main .card .col-2 {
+
+    gap: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+body main .card .col-2 .info {
+
+    font-size: .5em;
+    opacity: .8;
+    line-height: 1.6;
+}
+
+
+
+@media (max-width: 769px) {
+    
+    
+    body main .card {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    body main .card .row {
+        width: 50%;
+        font-size: var(--step-0) !important;
+    }
+}
+
+@media (max-width: 362px) {
+
+    body main .card {
+        width: 600px;
+    }
+}
+
+@media (max-width: 313px) {
+
+    body main .card {
+        width: 500px;
+    }
+}
